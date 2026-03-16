@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Majestic Women's Fashion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Majestic</h1>
+<nav>
+<a href="#">الرئيسية</a>
+<a href="#products">المنتجات</a>
+<a href="#order">اطلب</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>أحدث الموضة النسائية</h2>
+<p>Majestic Fashion Egypt</p>
+</section>
+
+<h2 class="title" id="products">المنتجات</h2>
+
+<section class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+<h3>فستان سواريه</h3>
+<p>850 جنيه</p>
+<button onclick="addToCart('فستان سواريه',850)">اضف للسلة</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
+<h3>طقم صيفي</h3>
+<p>620 جنيه</p>
+<button onclick="addToCart('طقم صيفي',620)">اضف للسلة</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1509631179647-0177331693ae">
+<h3>جاكيت شيك</h3>
+<p>990 جنيه</p>
+<button onclick="addToCart('جاكيت شيك',990)">اضف للسلة</button>
+</div>
+
+</section>
+
+<h2 class="title" id="order">إتمام الطلب</h2>
+
+<section class="order">
+
+<form action="http://localhost:3000/order" method="POST">
+
+<input name="name" placeholder="الاسم" required>
+<input name="email" placeholder="الايميل" required>
+<input name="phone" placeholder="الموبايل" required>
+<input name="address" placeholder="العنوان" required>
+
+<select name="payment">
+<option>الدفع عند الاستلام</option>
+<option>دفع اونلاين</option>
+</select>
+
+<input type="hidden" name="cart" id="cartData">
+
+<button onclick="prepareOrder()" type="submit">تأكيد الطلب</button>
+
+</form>
+
+</section>
+
+<div class="cart" id="cart">🛒 (0)</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
